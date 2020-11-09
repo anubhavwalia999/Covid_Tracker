@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorGray1"
+    tools:context=".StatsFragment">
+<RelativeLayout
+    android:id="@+id/search"
+    android:layout_width="match_parent"
+
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/progrssBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+
+        />
+    <EditText
+        android:id="@+id/searchet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@id/sortBtn"
+        android:layout_toEndOf="@id/progrssBar"
+        android:background="@drawable/shape_react"
+        android:drawableStart="@drawable/ic_tsearch"
+        android:hint="Search"
+        android:padding="0dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray1"/>
+
+    <ImageButton
+        android:id="@+id/sortBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+    android:layout_marginEnd="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_sort_24"
+        />
+</RelativeLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/statsRv"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+tools:listitem="@layout/row_stat"
+    />
+
+
+</LinearLayout>
